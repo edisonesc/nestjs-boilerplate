@@ -54,7 +54,7 @@ Fundamental runtime and framework building blocks for a NestJS application.
 Loading, managing, and accessing environment variables and app configuration.
 
 - **@nestjs/config** – NestJS-native configuration module with DI support
-- **dotenv** – Loads environment variables from `.env`-style files
+- ~~**dotenv** – Loads environment variables from `.env`-style files~~
 
 ---
 
