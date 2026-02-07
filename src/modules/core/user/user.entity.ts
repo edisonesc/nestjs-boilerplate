@@ -10,9 +10,9 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { Exclude, instanceToPlain } from 'class-transformer';
-import { AuthSessionEntity } from '../auth/entities/auth-session.entity';
+import { AuthSessionEntity } from '../core/auth/entities/auth-session.entity';
 
-@Entity('user')
+@Entity('users')
 export class UserEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;

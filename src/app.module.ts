@@ -7,7 +7,8 @@ import { PhotoModule } from './reference-modules/photo/photo.module';
 import { BankAccountModule } from './modules/cqrs/cqrs-es-bank-account/bank-account.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import config from './database/orm.config';
-import { UsersModule } from './modules/user/user.module';
+import { PermissionsModule } from './modules/core/permissions/permissions.module';
+import { UsersModule } from './modules/core/user/user.module';
 
 @Module({
   imports: [
@@ -23,14 +24,16 @@ import { UsersModule } from './modules/user/user.module';
     // Core Modules
     UsersModule,
 
+    PermissionsModule, // AutoCRUD
+
     // Simple Modules
     PhotoModule,
 
-    // AutoCRUD Modules
     // CQRS Modules
     PostModule,
     // CQRS with Event Sourcing Modules
     BankAccountModule,
+    PermissionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

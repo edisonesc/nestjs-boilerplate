@@ -66,7 +66,7 @@ JWT-based authentication, Passport strategies, and password security.
 
 ## 🧩 CQRS / Architectural Patterns
 
-Implements Command Query Responsibility Segregation and domain events.
+Implements Command Query Responsibility Segregation and domain events. (POC only)
 
 - **@nestjs/cqrs** – CQRS helpers for commands, queries, handlers, and events
 
@@ -79,6 +79,9 @@ Database access, ORM mapping, and SQL driver.
 - **@nestjs/typeorm** – NestJS integration for TypeORM with DI support
 - **typeorm** – ORM for entity mapping, repositories, and migrations
 - **mysql2** – MySQL database driver used by TypeORM
+
+- **@dataui/crud (former @nestjsx/crud)** – Declarative CRUD framework for NestJS that auto-generates REST endpoints from entities and DTOs
+- **@dataui/crud-typeorm (former @nestjsx/crud-typeorm)** – TypeORM adapter for @nestjsx/crud, enabling repository-based CRUD operations
 
 ---
 

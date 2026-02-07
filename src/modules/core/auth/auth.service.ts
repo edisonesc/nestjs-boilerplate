@@ -5,7 +5,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserEntity } from '../user/user.entity';
+import { UserEntity } from '../../user/user.entity';
 import { Repository } from 'typeorm';
 import { AuthSessionEntity } from './entities/auth-session.entity';
 import { JwtService } from '@nestjs/jwt';
