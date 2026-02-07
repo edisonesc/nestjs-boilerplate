@@ -1,15 +1,16 @@
 import { Body, Inject, Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { Photo } from './photo.entity';
+import { PhotoEntity } from './photo.entity';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class PhotoService {
   constructor(
-    @Inject('PHOTO_REPOSITORY')
-    private readonly photoRepository: Repository<Photo>,
+    @InjectRepository(PhotoEntity)
+    private readonly photoRepository: Repository<PhotoEntity>,
   ) {}
 
-  async findAll(): Promise<Photo[]> {
+  async findAll(): Promise<PhotoEntity[]> {
     return this.photoRepository.find();
   }
 
