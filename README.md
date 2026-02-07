@@ -23,6 +23,13 @@
 
 ## Description
 
+## 🏗️ Architecture Overview
+
+This project follows a modular NestJS architecture with JWT-based authentication
+and RBAC (Role-Based Access Control) enforced via guards and route metadata.
+
+![NestJS Boilerplate Architecture](./docs/nest-js-boilerplate-architecture.png)
+
 # 📦 Dependencies Overview
 
 This document groups project dependencies by responsibility and explains
