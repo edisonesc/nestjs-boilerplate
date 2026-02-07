@@ -10,7 +10,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { Exclude, instanceToPlain } from 'class-transformer';
-import { AuthSessionEntity } from '../core/auth/entities/auth-session.entity';
+import { AuthSessionEntity } from '../auth/entities/auth-session.entity';
 
 @Entity('users')
 export class UserEntity {
