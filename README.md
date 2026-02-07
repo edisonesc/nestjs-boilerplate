@@ -86,8 +86,8 @@ Database access, ORM mapping, and SQL driver.
 - **typeorm** – ORM for entity mapping, repositories, and migrations
 - **mysql2** – MySQL database driver used by TypeORM
 
-- **@dataui/crud (former @nestjsx/crud)** – Declarative CRUD framework for NestJS that auto-generates REST endpoints from entities and DTOs
-- **@dataui/crud-typeorm (former @nestjsx/crud-typeorm)** – TypeORM adapter for @nestjsx/crud, enabling repository-based CRUD operations
+- **@dataui/crud** – CRUD framework for NestJS, inspired by **@nestjsx/crud**, with declarative endpoint generation
+- **@dataui/crud-typeorm** – TypeORM adapter for **@dataui/crud** enabling repository-based CRUD operations
 
 ---
 
