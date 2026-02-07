@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './modules/database/database.module';
 import { PostModule } from './reference-modules/post/post.module';
 import { PhotoModule } from './reference-modules/photo/photo.module';
+import { BankAccountModule } from './modules/cqrs-es-bank-account/bank-account.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { PhotoModule } from './reference-modules/photo/photo.module';
     // CQRS Modules
     PostModule,
     // CQRS with Event Sourcing Modules
+    BankAccountModule,
   ],
   controllers: [AppController],
   providers: [AppService],
