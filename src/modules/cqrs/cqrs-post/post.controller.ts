@@ -3,6 +3,7 @@ import { CommandBus, QueryBus } from '@nestjs/cqrs';
 import { CreatePostCommand } from './commands/create-post.command';
 import { GetPostQuery } from './queries/get-post.query';
 import { GetPostsQuery } from './queries/get-posts.query';
+import { PostDTO } from './post.dto';
 
 @Controller('posts')
 export class PostController {
@@ -12,7 +13,7 @@ export class PostController {
   ) {}
 
   @Post()
-  create(@Body() dto: any) {
+  create(@Body() dto: PostDTO) {
     return this.commandBus.execute(new CreatePostCommand(dto.title, dto.body));
   }
 
