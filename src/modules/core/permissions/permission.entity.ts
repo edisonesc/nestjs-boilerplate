@@ -6,7 +6,7 @@ export class PermissionEntity {
   id: number;
 
   @Column({
-    type: 'text',
+    type: 'varchar',
     unique: true,
   })
   name: string;

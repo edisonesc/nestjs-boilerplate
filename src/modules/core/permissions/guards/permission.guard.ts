@@ -17,7 +17,7 @@ export class PermissionGuard implements CanActivate {
   }
 
   private async checkPermissions(
-    resource: string,
+    resource: string, // e.g. PERMISSION, USER
     context: ExecutionContext,
   ): Promise<boolean> {
     if (!resource) return true;
