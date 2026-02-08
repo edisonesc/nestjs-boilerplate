@@ -9,6 +9,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import config from './database/orm.config';
 import { PermissionsModule } from './modules/core/permissions/permissions.module';
 import { UsersModule } from './modules/core/user/user.module';
+import { RoleModule } from './modules/core/role/role.module';
+import { AuthModule } from './modules/core/auth/auth.module';
 
 @Module({
   imports: [
@@ -23,9 +25,10 @@ import { UsersModule } from './modules/core/user/user.module';
 
     // Core Modules
     UsersModule,
-
-    PermissionsModule, // AutoCRUD
-
+    AuthModule,
+    // AutoCRUD
+    PermissionsModule,
+    RoleModule,
     // Simple Modules
     PhotoModule,
 

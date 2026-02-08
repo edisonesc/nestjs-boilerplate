@@ -11,6 +11,7 @@ import {
 } from 'typeorm';
 import { Exclude, instanceToPlain } from 'class-transformer';
 import { AuthSessionEntity } from '../auth/entities/auth-session.entity';
+import { RoleEntity } from '../role/role.entity';
 
 @Entity('users')
 export class UserEntity {
@@ -45,7 +46,9 @@ export class UserEntity {
   @OneToMany(() => AuthSessionEntity, (session) => session.user)
   auth_sessions: AuthSessionEntity[];
 
-  // @ManyToOne(())
+  @ManyToOne(() => RoleEntity, (role) => role.users)
+  @JoinColumn({ name: 'role_id', referencedColumnName: 'id' })
+  role: RoleEntity;
 
   toJSON() {
     return instanceToPlain(this);
