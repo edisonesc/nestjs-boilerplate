@@ -5,7 +5,6 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserEntity } from '../../user/user.entity';
 import { Repository } from 'typeorm';
 import { AuthSessionEntity } from './entities/auth-session.entity';
 import { JwtService } from '@nestjs/jwt';
@@ -14,6 +13,7 @@ import { comparePassword, hashPassword } from 'src/shared/utils';
 import { IAuthPayload } from './interfaces';
 import { ConfigService } from '@nestjs/config';
 import * as jwt from 'jsonwebtoken';
+import { UserEntity } from '../user/user.entity';
 
 @Injectable()
 export class AuthService {

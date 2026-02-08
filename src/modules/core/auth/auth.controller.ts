@@ -3,9 +3,9 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { LoginDTO, RegisterDTO } from './dto';
 import { AuthGuard } from '@nestjs/passport';
-import { UserEntity } from '../../user/user.entity';
 import { CurrentUser } from './decorators/current-user.decorator';
 import { IAuthPayload } from './interfaces';
+import { UserEntity } from '../user/user.entity';
 
 @ApiTags('Authentication')
 @Controller('auth')
