@@ -17,7 +17,16 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/database/data-source.ts",
+    "migration:generate": "npm run typeorm migration:generate -- -n",
+    "migration:show": "npm run typeorm migration:show",
+    "migration:up": "npm run typeorm migration:run",
+    "migration:down": "npm run typeorm migration:revert",
+    "seed": "ts-node src/database/seed.ts",
+    "seed:fresh": "npm run schema:drop && npm run migration:up && npm run seed",
+    "schema:drop": "ts-node ./node_modules/typeorm/cli.js schema:drop -d src/database/data-source.ts",
+    "db:setup": "npm run build && npm run schema:drop && npm run migration:up && npm run seed"
   },
   "dependencies": {
     "@dataui/crud": "^5.3.4",
@@ -34,12 +43,14 @@
     "bcryptjs": "^3.0.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.3",
+    "dotenv": "^17.2.4",
     "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.16.2",
     "passport-jwt": "^4.0.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "typeorm": "^0.3.28"
+    "typeorm": "^0.3.28",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
