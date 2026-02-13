@@ -196,6 +196,29 @@ Improves runtime error reporting and debugging.
 $ npm install
 ```
 
+## Environment Setup
+
+```bash
+# env sample located at ./env/env.(develop | staging | production)
+
+DB_HOST=
+DB_PORT=
+DB_USERNAME=
+DB_PASSWORD=
+DB_DATABASE=
+DB_TYPE=mysql
+
+MYSQL_ROOT_PASSWORD=
+MYSQL_DATABASE=
+
+JWT_SECRET=
+JWT_EXIPIRES_IN=
+JWT_REFRESH_TOKEN_SECRET=
+JWT_REFRESH_TOKEN_EXPIRES_IN=
+
+ENV=DEVELOP
+```
+
 ## Compile and run the project
 
 ```bash
@@ -234,6 +257,26 @@ $ mau deploy
 ```
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+
+Docker
+
+Build
+
+```bash
+docker compose -f docker/dev/docker-compose.yml up --build
+```
+
+Setup DB (Schema/Migrations/Seeds)
+
+```bash
+docker compose -f docker/dev/docker-compose.yml exec api npm run db:setup
+```
+
+Stopping
+
+```bash
+docker compose -f docker/dev/docker-compose.yml exec api npm run migration:up
+```
 
 ## Resources
 
