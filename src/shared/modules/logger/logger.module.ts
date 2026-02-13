@@ -14,7 +14,7 @@ import { HttpConsoleLoggerInterceptor } from './interceptors/http-console-logger
       useFactory: (config: ConfigService) => {
         const isDev: boolean = config.get<string>('ENV') === NODE_ENV.DEVELOP;
         return {
-          transports: !isDev
+          transports: isDev
             ? [
                 new winston.transports.Console({
                   format: winston.format.combine(
