@@ -16,4 +16,7 @@ export class PhotoEntity {
 
   @Column()
   isPublished: boolean;
+
+  @Column('text')
+  category: string;
 }
