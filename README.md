@@ -91,6 +91,16 @@ Database access, ORM mapping, and SQL driver.
 
 ---
 
+## 🪵 Logging & Observability
+
+Handles application logs, error tracking, and system monitoring.
+
+- **winston** – A versatile logging library for Node.js with support for multiple transports (console, file, etc.)
+
+- **nest-winston** – A NestJS module wrapper for winston to enable dependency injection and global logger replacement
+
+---
+
 ## 🧪 Validation & Serialization
 
 Request validation and DTO transformation.
