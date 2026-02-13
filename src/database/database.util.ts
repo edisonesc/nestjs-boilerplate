@@ -11,5 +11,6 @@ export function buildTypeOrmOptions(env: NodeJS.ProcessEnv): DataSourceOptions {
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
     synchronize: false,
     migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
+    logger: 'file',
   };
 }

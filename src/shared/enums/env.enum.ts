@@ -1,0 +1,4 @@
+export enum NODE_ENV {
+  DEVELOP = 'DEVELOP',
+  PRODUCTION = 'PRODUCTION',
+}

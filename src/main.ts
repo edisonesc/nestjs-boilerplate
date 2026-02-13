@@ -3,10 +3,10 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { ValidationFilter } from './shared/utils/filters/validation.filter';
+import { ValidationFilter } from './shared/filters/validation.filter';
 import { ValidationPipe } from '@nestjs/common';
 import { ValidationError } from 'class-validator';
-import { ValidationException } from './shared/utils/exceptions/validation.exception';
+import { ValidationException } from './shared/exceptions/validation.exception';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
