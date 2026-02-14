@@ -260,7 +260,7 @@ With Mau, you can deploy your application in just a few clicks, allowing you to 
 
 ## Docker
 
-Build
+Build & Start
 
 ```bash
 docker compose -f docker/dev/docker-compose.yml up --build
@@ -272,7 +272,13 @@ Setup DB (Schema/Migrations/Seeds)
 docker compose -f docker/dev/docker-compose.yml exec api npm run db:setup
 ```
 
-Stopping
+Stop Containers
+
+```bash
+docker compose -f docker/dev/docker-compose.yml down
+```
+
+Reset
 
 ```bash
 docker compose -f docker/dev/docker-compose.yml down -v # -v deletes volumes
