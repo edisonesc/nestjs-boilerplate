@@ -258,7 +258,7 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
-Docker
+## Docker
 
 Build
 
@@ -275,7 +275,7 @@ docker compose -f docker/dev/docker-compose.yml exec api npm run db:setup
 Stopping
 
 ```bash
-docker compose -f docker/dev/docker-compose.yml exec api npm run migration:up
+docker compose -f docker/dev/docker-compose.yml down -v # -v deletes volumes
 ```
 
 ## Resources
